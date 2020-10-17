@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  line-height: 1.7;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+li {
+  list-style: none;
+  display: inline;
+}
+
+p {
+  font-weight: 400;
+}
+
+.section-paragraph {
+  font-size: 1.4rem;
+}
+
+.text-box {
+  background: #58508d;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.projects .text-box p {
+  margin-top: 1rem;
+}
+
+/* Main header */
+#main-header {
+  background: #1b1b2f url("../img/background.jpg") center center/cover no-repeat;
+  height: 100vh;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  display: flex;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 1.3rem;
+}
+
+.header-text h1 {
+  font-size: 5rem;
+  animation: appear-shift 1500ms both 0.5s;
+}
+
+.header-text p {
+  animation: opacity-change 1000ms both 1s;
+}
+
+.header-text .image-person {
+  width: 20%;
+  border-radius: 100%;
+  animation: opacity-change 1000ms both;
+}
+
+.icon-list ul {
+  padding: 2rem;
+}
+
+.icon-list ul li {
+  margin: 0 1.2rem;
+}
+
+.icon-list img {
+  width: 4%;
+  animation: opacity-change 1000ms both 2000ms;
+  transition: all 200ms ease-out;
+}
+
+.icon-list img:hover {
+  transform: scale(0.9);
+}
+
+/* About Me */
+#about-me {
+  background: #3c2c51;
+}
+
+.about-me__content {
+  padding: 3.5rem;
+}
+
+.about-items {
+  display: flex;
+  padding-top: 1.3rem;
+  margin-right: 1.3rem;
+}
+
+.about-item {
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.about-item h2 {
+  padding: 0.5rem;
+}
+
+.about-items .about-item img {
+  width: 160px;
+  margin-bottom: 0.6rem;
+  transition: 200ms ease-out;
+}
+
+.about-items .about-item img:hover {
+  transform: scale(0.9);
+}
+
+/* Projects Section */
+#main-projects {
+  background: #333366;
+}
+
+.projects-content {
+  padding: 3rem;
+}
+
+.projects {
+  display: grid;
+  max-width: 80%;
+  padding-top: 2rem;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 300px;
+  grid-gap: 1.5rem;
+}
+
+.projects div img {
+  width: 100%;
+  height: 100%;
+  transition: all 200ms ease-out;
+}
+
+.projects div img:hover {
+  transform: scale(0.9);
+}
+
+/* Footer */
+#main-footer {
+  padding: 2rem;
+  background: black;
+  font-size: 0.2rem;
+}
+
+.copyright {
+  font-size: 1rem;
+}
+.email {
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.attributes {
+  font-size: 0.75rem;
+}
+
+/* Animations */
+@keyframes appear-shift {
+  0% {
+    transform: translate(-300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-change {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+
+@media (orientation: portrait) and (max-width: 1800px) {
+  .icon-list img {
+    width: 7%;
+  }
+}
+
+@media (max-width: 1140px) {
+  .projects {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 1.5rem;
+  }
+
+  .projects .text-box {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 890px) {
+  .icon-list img {
+    width: 10%;
+  }
+
+  .about-items {
+    flex-direction: column;
+    padding: 2rem 5rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .header-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .icon-list img {
+    width: 13%;
+  }
+
+  .header-text h1 {
+    font-size: 3rem;
+  }
+
+  .header-text .image-person {
+    width: 30%;
+  }
+
+  .about-items {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .icon-list img {
+    width: 15%;
+  }
+
+  .header-text {
+    font-size: 1.3rem;
+  }
+
+  .about-me__content {
+    padding: 2rem 0;
+  }
+
+  .header-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-box p {
+    display: none;
+  }
+
+  #main-projects h2 {
+    font-size: 1rem;
+  }
+
+  #main-projects p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .header-text {
+    font-size: 1rem;
+  }
+
+  #about-me .about-item {
+    padding: 2rem 0;
+  }
+}
+
+@media (orientation: Landscape) and (max-height: 600px) {
+  .header-text h1 {
+    font-size: 2rem;
+  }
+
+  .icon-list img {
+    width: 5%;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 800px) and (max-width: 1025px) {
+  .header-text h1 {
+    font-size: 5rem;
+  }
+
+  .header-text {
+    font-size: 2rem;
+  }
+}
