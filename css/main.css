@@ -148,18 +148,17 @@ p {
 }
 
 .overlay {
-  height: 0;
+  background-color: #eee;
+  position: absolute;
+  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  position: absolute;
-  transition: all 0.3s ease;
   opacity: 0;
-  background-color: #eee;
+  transition: all 0.3s ease;
 }
 
 .project-link:hover .overlay {
-  height: 100%;
   opacity: 1;
 }
 
@@ -240,7 +239,6 @@ p {
 
 /* Media Queries */
 
-
 @media (max-width: 1140px) {
   .projects {
     grid-template-columns: 1fr;
@@ -259,7 +257,6 @@ p {
     padding-right: 0;
   }
 }
-
 
 @media (max-width: 769px) {
   .header-text {
