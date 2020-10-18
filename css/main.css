@@ -29,6 +29,10 @@ li {
   display: inline;
 }
 
+a {
+  color: white;
+}
+
 p {
   font-weight: 400;
 }
@@ -38,7 +42,7 @@ p {
 }
 
 .text-box {
-  background: #58508d;
+  background: #eee;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -52,9 +56,8 @@ p {
 
 /* Main header */
 #main-header {
-  background: #1b1b2f url("../img/background.jpg") center center/cover no-repeat;
+  background: #161a1d;
   height: 100vh;
-  letter-spacing: 2px;
   line-height: 1.5;
   display: flex;
 }
@@ -69,7 +72,7 @@ p {
 }
 
 .header-text h1 {
-  font-size: 5rem;
+  font-size: 5.1rem;
   animation: appear-shift 1500ms both 0.5s;
 }
 
@@ -78,7 +81,7 @@ p {
 }
 
 .header-text .image-person {
-  width: 20%;
+  width: 40%;
   border-radius: 100%;
   animation: opacity-change 1000ms both;
 }
@@ -91,19 +94,19 @@ p {
   margin: 0 1.2rem;
 }
 
-.icon-list img {
-  width: 4%;
+.icon-list i {
+  font-size: 2rem;
   animation: opacity-change 1000ms both 2000ms;
   transition: all 200ms ease-out;
 }
 
-.icon-list img:hover {
-  transform: scale(0.9);
+.icon-list i:hover {
+  transform: scale(1.3);
 }
 
 /* About Me */
 #about-me {
-  background: #3c2c51;
+  background: #313845;
 }
 
 .about-me__content {
@@ -113,7 +116,6 @@ p {
 .about-items {
   display: flex;
   padding-top: 1.3rem;
-  margin-right: 1.3rem;
 }
 
 .about-item {
@@ -138,7 +140,7 @@ p {
 
 /* Projects Section */
 #main-projects {
-  background: #333366;
+  background: #161a1d;
 }
 
 .projects-content {
@@ -207,12 +209,6 @@ p {
 
 /* Media Queries */
 
-@media (orientation: portrait) and (max-width: 1800px) {
-  .icon-list img {
-    width: 7%;
-  }
-}
-
 @media (max-width: 1140px) {
   .projects {
     grid-template-columns: 1fr;
@@ -226,10 +222,6 @@ p {
 }
 
 @media (max-width: 890px) {
-  .icon-list img {
-    width: 10%;
-  }
-
   .about-items {
     flex-direction: column;
     padding: 2rem 5rem;
@@ -244,10 +236,6 @@ p {
 }
 
 @media (max-width: 600px) {
-  .icon-list img {
-    width: 13%;
-  }
-
   .header-text h1 {
     font-size: 3rem;
   }
@@ -263,10 +251,6 @@ p {
 }
 
 @media (max-width: 450px) {
-  .icon-list img {
-    width: 15%;
-  }
-
   .header-text {
     font-size: 1.3rem;
   }
@@ -309,10 +293,6 @@ p {
 @media (orientation: Landscape) and (max-height: 600px) {
   .header-text h1 {
     font-size: 2rem;
-  }
-
-  .icon-list img {
-    width: 5%;
   }
 }
 
