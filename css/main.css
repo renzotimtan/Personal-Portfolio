@@ -102,12 +102,12 @@ p {
 
 .about-items {
   display: flex;
-  padding-top: 1.4rem;
+  padding-top: 1.3rem;
 }
 
 .about-item {
   padding: 2rem;
-  max-width: 600px;
+  width: 30%;
   margin: auto;
 }
 
@@ -241,10 +241,6 @@ p {
 /* Media Queries */
 
 
-@media (min-width: 1500px) {
-  
-}
-
 @media (max-width: 1140px) {
   .projects {
     grid-template-columns: 1fr;
@@ -256,11 +252,14 @@ p {
     flex-direction: column;
     margin-right: 0;
   }
+
+  .about-item {
+    width: 80%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-@media (max-width: 890px) {
-  
-}
 
 @media (max-width: 769px) {
   .header-text {
@@ -316,6 +315,10 @@ p {
   .project-text a {
     padding: 1px 4px;
     font-size: 0.7rem;
+  }
+
+  .about-item {
+    width: 90%;
   }
 }
 
