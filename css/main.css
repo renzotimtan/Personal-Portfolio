@@ -179,8 +179,11 @@ p {
   transform: translate(-50%, -50%);
 }
 
-.project-text a {
+.buttons {
   margin-top: 1rem;
+}
+
+.project-text a {
   text-decoration: none;
   color: #171b1e;
   border: 1px solid #171b1e;
